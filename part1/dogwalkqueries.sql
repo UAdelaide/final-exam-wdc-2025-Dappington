@@ -22,4 +22,5 @@ VALUES ('navydavie', 'dave@example.com', 'passwrd222', 'walker');
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('navydavie', 'dave@example.com', 'passwrd222', 'walker'),
 ('ethanhunt', 'ethan@example.com', '177013', 'owner');
+
 1 more dogs with details of your choosing.

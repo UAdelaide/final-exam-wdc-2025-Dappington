@@ -17,6 +17,6 @@ VALUES (LAST_INSERT_ID(), 'Killer', 'small'), (LAST_INSERT_ID(), 'Princess', 'la
 
 
 Five dogs:
-A dog named Max, who is medium-sized and owned by alice123.
+
 A dog named Bella, who is small and owned by carol123.
-Three more dogs with details of your choosing.
+1 more dogs with details of your choosing.

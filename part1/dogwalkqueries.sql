@@ -18,9 +18,3 @@ VALUES ('bobwalker', 'bob@example.com', 'hashed456', 'walker');
 
 INSERT INTO Users (username, email, password_hash, role)
 VALUES ('navydavie', 'dave@example.com', 'passwrd222', 'walker');
-
-('carol123', 'carol@example.com', 'hashed789', 'owner'),
-('navydavie', 'dave@example.com', 'passwrd222', 'walker'),
-('ethanhunt', 'ethan@example.com', '177013', 'owner');
-
-1 more dogs with details of your choosing.

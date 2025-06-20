@@ -6,7 +6,9 @@ VALUES
 ('navydavie', 'dave@example.com', 'passwrd222', 'walker'),
 ('ethanhunt', 'ethan@example.com', '177013', 'owner');
 
-A user with the username alice123, email alice@example.com, password hash hashed123, and role owner.
-A user with the username bobwalker, email bob@example.com, password hash hashed456, and role walker.
-A user with the username carol123, email carol@example.com, password hash hashed789, and role owner.
+INSERT INTO Dogs (name, size, owner)
 
+Five dogs:
+A dog named Max, who is medium-sized and owned by alice123.
+A dog named Bella, who is small and owned by carol123.
+Three more dogs with details of your choosing.

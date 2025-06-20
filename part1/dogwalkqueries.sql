@@ -1,14 +1,14 @@
 INSERT INTO Users (username, email, password_hash, role)
 VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner');
-('alice123', 'alice@example.com', 'hashed123', 'owner'),
+
+
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('navydavie', 'dave@example.com', 'passwrd222', 'walker'),
 ('ethanhunt', 'ethan@example.com', '177013', 'owner');
 
 INSERT INTO Dogs (owner_id, name, size)
-VALUES
-(1, )
+VALUES (last_insert, )
 
 Five dogs:
 A dog named Max, who is medium-sized and owned by alice123.

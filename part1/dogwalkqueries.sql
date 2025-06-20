@@ -1,7 +1,7 @@
 INSERT INTO Users (username, email, password_hash, role)
 VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner');
 INSERT INTO Dogs (owner_id, name, size)
-VALUES (LAST_INSERT_ID(), 'Max', 'medium');
+VALUES (LAST_INSERT_ID(), 'Max', 'medium'), (LAST_INSERT_ID(), 'Rex', 'medium');
 
 INSERT INTO Users (username, email, password_hash, role)
 VALUES ('ethanhunt', 'ethan@example.com', '177013', 'owner');

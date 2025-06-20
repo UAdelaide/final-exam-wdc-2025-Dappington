@@ -3,10 +3,38 @@
 <head>
     <title>Express</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
-    <h1>Express</h1>
-    <p>Welcome to Express</p>
+    <img :src="current_dog">
+    <button type="button" style="position: absolute; bottom: 0; right: 0;" @click="getNewDog()">request URL from API</button>
+
+    <script>
+        const {ref, onMounted} = Vue
+
+        Vue.createApp({
+            setup(){
+                var current_dog = ref('')
+
+                onMounted(async () => {
+                    const response = await fetch('https://dog.ceo/api/breeds/image/random')
+                    const responseJSON = await response.json()
+                    current_dog.value = responseJSON.message
+                })
+
+                return{
+                    current_dog
+                }
+            },
+            methods: {
+                async getNewDog() {
+                    const response = await fetch('https://dog.ceo/api/breeds/image/random')
+                    const responseJSON = await response.json()
+                    this.current_dog = responseJSON.message
+                }
+            }
+        }).mount('body')
+    </script>
 </body>
 </html>

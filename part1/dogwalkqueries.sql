@@ -8,7 +8,7 @@ VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner');
 ('ethanhunt', 'ethan@example.com', '177013', 'owner');
 
 INSERT INTO Dogs (owner_id, name, size)
-VALUES (LAST_INSERT_ID(), )
+VALUES (LAST_INSERT_ID(), 'Max', 'medium')
 
 Five dogs:
 A dog named Max, who is medium-sized and owned by alice123.

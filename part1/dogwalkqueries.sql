@@ -1,4 +1,4 @@
-INSERT INTO Users (username)
+INSERT INTO Users (username, email, password_hash, role)
 VALUES (alice123, email alice@example.com, password hash hashed123, and role owner)
 
 A user with the username alice123, email alice@example.com, password hash hashed123, and role owner.

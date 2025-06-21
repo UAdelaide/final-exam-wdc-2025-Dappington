@@ -12,6 +12,8 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+
 // POST a new user (simple signup)
 router.post('/register', async (req, res) => {
   const { username, email, password, role } = req.body;
@@ -64,6 +66,8 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Login failed' });
   }
 });
+
+router.get('/mydogs')
 
 router.get('/logout', function(req,res){
   req.session.destroy(() => res.redirect('/'));

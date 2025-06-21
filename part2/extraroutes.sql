@@ -1,2 +1,2 @@
 SELECT * FROM Dogs
-WHERE 
+WHERE owner_id = ?;

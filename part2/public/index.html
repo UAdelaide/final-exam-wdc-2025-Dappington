@@ -52,7 +52,7 @@
             const res = await fetch('/api/walks/api/dogs');
             dogInfo.value = await res.json();
             dogInfo.value = await Promise.all(dogInfo.value.map(async (dog) => {
-              
+              const res = await fetch('https://dog.ceo/api/breeds/image/random')
               return dog;
             }));
           } catch (err) {

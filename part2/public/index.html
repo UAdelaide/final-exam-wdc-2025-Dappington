@@ -50,7 +50,7 @@
         async function getDogs() {
           try {
             const res = await fetch('/api/walks/api/dogs');
-            
+            dogInfo.value = await res.json()
           } catch (err) {
             console.error(err);
           }

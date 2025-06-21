@@ -74,9 +74,7 @@ router.get('/mydogs', async(req, res) => {
         return;
     }
     try {
-        const dogs = await db.query(`SELECT dog_id AS id, name FROM Dogs WHERE owner_id = ?;`, [req.session.user_id]);
-        console.log('Sending response!');
-        console.log(dogs);
+        const queryResponse = await db.query(`SELECT dog_id AS id, name FROM Dogs WHERE owner_id = ?;`, [req.session.user_id]);
         res.send(dogs);
     } catch (err) {
         res.sendStatus(500);

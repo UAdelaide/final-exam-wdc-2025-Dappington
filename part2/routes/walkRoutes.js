@@ -38,14 +38,14 @@ router.post('/', async (req, res) => {
 // POST an application to walk a dog (from walker)
 router.post('/:id/apply', async (req, res) => {
   const requestId = req.params.id;
-  const { walker_id } = req.body.value;
+  const { walker_id } = req.body;
   console.log(walker_id);
 
   try {
     await db.query(`
       INSERT INTO WalkApplications (request_id, walker_id)
       VALUES (?, ?)
-    `, [requestId, walker_id]);
+    `, [requestId, walker_id.value]);
 
     await db.query(`
       UPDATE WalkRequests

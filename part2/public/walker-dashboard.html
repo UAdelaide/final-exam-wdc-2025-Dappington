@@ -58,7 +58,7 @@
         async function getSessionUserId() {
           try {
             const res = await fetch(`/api/users/me`)
-            const user = await res.json().
+            user.value = await res.json()
           }
         }
 

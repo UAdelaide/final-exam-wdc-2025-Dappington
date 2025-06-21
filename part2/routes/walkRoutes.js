@@ -59,4 +59,13 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
+router.get('/api/dogs', async (req, res) => {
+    try {
+        const [rows] = await db.query(`SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id;`);
+        res.json(rows);
+    } catch (err) {
+        res.sendStatus(404);
+    }
+});
+
 module.exports = router;

@@ -55,7 +55,7 @@
           }
         }
 
-        async function getSessionUserId() {
+        async function getCurrentUser() {
           try {
             const res = await fetch(`/api/users/me`)
             user.value = await res.json()
@@ -86,7 +86,7 @@
 
         onMounted(() => {
           loadWalkRequests();
-          getSessionUserId();
+          getCurrentUser();
         });
 
         return {

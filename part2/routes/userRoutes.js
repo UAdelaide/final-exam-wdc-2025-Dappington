@@ -68,13 +68,13 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/mydogs', async(req, res) => {
-    console.log('request recieved');
     if (!req.session.loggedIn) {
         res.sendStatus(401);
         return;
     }
     try {
         const queryResponse = await db.query(`SELECT dog_id AS id, name FROM Dogs WHERE owner_id = ?;`, [req.session.user_id]);
+        const dogs = queryResponse[0];
         res.send(dogs);
     } catch (err) {
         res.sendStatus(500);

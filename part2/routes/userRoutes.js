@@ -68,6 +68,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/mydogs', async(req, res) => {
+    console.log('')
     if (!req.session.loggedIn) {
         res.sendStatus(401);
     }

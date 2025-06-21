@@ -51,10 +51,10 @@
           try {
             const res = await fetch('/api/walks/api/dogs');
             dogInfo.value = await res.json();
-            dogInfo.value = await Promise.all(dogInfo.value.map((dog) => {
-
+            dogInfo.value = await Promise.all(dogInfo.value.map(async (dog) => {
+              
               return dog;
-            }))
+            }));
           } catch (err) {
             console.error(err);
           }

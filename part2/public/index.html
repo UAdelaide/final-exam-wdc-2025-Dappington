@@ -51,7 +51,7 @@
           try {
             const res = await fetch('/api/walks/api/dogs');
             dogInfo.value = await res.json()
-            dogInfo.value = dogInfo.
+            dogInfo.value = dogInfo.value.map((dog))
           } catch (err) {
             console.error(err);
           }

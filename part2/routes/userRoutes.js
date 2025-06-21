@@ -74,7 +74,7 @@ router.get('/mydogs', async(req, res) => {
         res.sendStatus(401);
         return;
     }
-    // 
+    // get a list of the user's dogs from the database and send it back
     try {
         const queryResponse = await db.query(`SELECT dog_id AS id, name FROM Dogs WHERE owner_id = ?;`, [req.session.user_id]);
         const dogs = queryResponse[0];

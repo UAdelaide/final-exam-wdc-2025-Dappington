@@ -59,8 +59,9 @@
           try {
             const res = await fetch(`/api/users/me`)
             user.value = await res.json()
+            console.log
           } catch (err) {
-            error.value = "Fatal Error: can't get user id"  
+            error.value = "Fatal Error: can't get user id"
           }
         }
 

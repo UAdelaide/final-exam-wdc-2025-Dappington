@@ -45,7 +45,7 @@ router.post('/:id/apply', async (req, res) => {
     await db.query(`
       INSERT INTO WalkApplications (request_id, walker_id)
       VALUES (?, ?)
-    `, [requestId, walker_id.value]);
+    `, [requestId, walker_id._value]);
 
     await db.query(`
       UPDATE WalkRequests

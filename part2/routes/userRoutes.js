@@ -71,7 +71,8 @@ router.get('/mydogs', async(req, res) => {
     if (!req.session.loggedIn) {
         res.sendStatus(401);
     }
-    const dogs = await db.query(``, [req.session.user_id]);
+    const dogs = await db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id = ?;`, [req.session.user_id]);
+    
 });
 
 router.get('/logout', function(req,res){

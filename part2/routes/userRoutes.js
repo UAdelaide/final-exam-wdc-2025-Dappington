@@ -68,7 +68,10 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/mydogs', async(req, res) => {
-    if 
+    if (!req.session.loggedIn) {
+        res.sendStatus(401);
+        return;
+    }
 });
 
 router.get('/logout', function(req,res){

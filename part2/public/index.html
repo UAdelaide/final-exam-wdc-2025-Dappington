@@ -25,14 +25,14 @@
       <button type="submit">Login</button>
     </form>
 
-    <table style="border: 1px solid black; border-collapse: collapse; padding: 2px;">
-      <tr>
+    <table >
+      <tr style="border: 1px solid black; border-collapse: collapse; padding: 2px;">
         <th>Dog Name</th>
         <th>Size</th>
         <th>Owner Name</th>
         <th>Photo</th>
       </tr>
-      <tr v-for="table_row in dogInfo">
+      <tr v-for="table_row in dogInfo" >
         <td>{{table_row.dog_name}}</td>
         <td>{{table_row.size}}</td>
         <td>{{table_row.owner_username}}</td>
